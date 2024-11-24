@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter Plot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Scatter Plot: Loan Percent Income vs Loan Interest Rate</h1>
+    <svg width="800" height="600"></svg>
+    <script>
+        // Set the dimensions and margins of the graph
+        const margin = { top: 50, right: 50, bottom: 50, left: 50 },
+              width = 800 - margin.left - margin.right,
+              height = 600 - margin.top - margin.bottom;
+
+        // Append the SVG object to the body of the page
+        const svg = d3.select("svg")
+                      .append("g")
+                      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load the data from the original dataset
+        d3.csv("credit_risk_dataset.csv").then(data => {
+            // Filter rows with non-null values for the columns of interest
+            data = data.filter(d => d.loan_percent_income !== "" && d.loan_int_rate !== "");
+
+            // Convert data to numeric
+            data.forEach(d => {
+                d.loan_percent_income = +d.loan_percent_income;
+                d.loan_int_rate = +d.loan_int_rate;
+            });
+
+            // Create scales
+            const x = d3.scaleLinear()
+                        .domain([0, d3.max(data, d => d.loan_percent_income)])
+                        .range([0, width]);
+
+            const y = d3.scaleLinear()
+                        .domain([0, d3.max(data, d => d.loan_int_rate)])
+                        .range([height, 0]);
+
+            // Add X axis
+            svg.append("g")
+               .attr("transform", `translate(0,${height})`)
+               .call(d3.axisBottom(x))
+               .append("text")
+               .attr("x", width / 2)
+               .attr("y", 40)
+               .attr("fill", "black")
+               .style("text-anchor", "middle")
+               .text("Loan Percent Income");
+
+            // Add Y axis
+            svg.append("g")
+               .call(d3.axisLeft(y))
+               .append("text")
+               .attr("x", -height / 2)
+               .attr("y", -40)
+               .attr("transform", "rotate(-90)")
+               .attr("fill", "black")
+               .style("text-anchor", "middle")
+               .text("Loan Interest Rate");
+
+            // Add points
+            svg.selectAll("circle")
+               .data(data)
+               .enter()
+               .append("circle")
+               .attr("cx", d => x(d.loan_percent_income))
+               .attr("cy", d => y(d.loan_int_rate))
+               .attr("r", 4)
+               .attr("fill", "blue")
+               .attr("opacity", 0.7);
+        }).catch(error => {
+            console.error("Error loading the data:", error);
+        });
+    </script>
+</body>
+</html>
