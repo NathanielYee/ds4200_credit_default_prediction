@@ -22,41 +22,20 @@
 
     <main>
         <section>
-            <h2>About</h2>
-
-            <p> In this section, we dive deeper into our analysis of credit risk, focusing on the relationships between key factors 
-                such as income levels, loan amounts, and credit history. Our findings suggest a strong correlation between financial 
-                variables and the probability of default, underscoring the importance of robust data preprocessing and model selection 
-                in assessing creditworthiness. 
-            </p>
-
-            <ul>
-                <li>Probability of Default: The likelihood that a borrower will fail to meet their debt obligations.</li>
-                <li>Loss Given Default: The amount of loss a lender incurs if a borrower defaults.</li>
-                <li>Exposure at Default: The total value exposed to risk at the time of default.</li>
-            </ul>
+            <h2>Dynamic Visualizations</h2>
+            <p>Below are interactive charts for exploring credit risk relationships dynamically:</p>
             
-            <ul>
-                <li><strong>Graph of Credit Risk Factors</strong>
-                    <br> This graph explores key variables influencing credit risk, such as income, loan size, and interest rates.
-                    <img src="images/placeholder_graph1.png" alt="Graph of Credit Risk Factors" width="300">
-                </li>
+            <h3>Health and Income by Region</h3>
+            <iframe src="dynamic_charts/health_income_charts.html" width="800" height="600" frameborder="0"></iframe>
+            <p>This chart allows users to explore the relationship between age, income, and loan intent with an interactive range selection.</p>
 
-                <li><strong>Risk Analysis Chart</strong>
-                    <br> This chart illustrates risk trends across different demographics and financial categories.
-                    <img src="images/placeholder_graph2.png" alt="Risk Analysis Chart" width="300">
-                </li>
+            <h3>Health and Income by Region (Radio Filter)</h3>
+            <iframe src="dynamic_charts/radio_filtered_charts.html" width="800" height="600" frameborder="0"></iframe>
+            <p>Use the radio buttons to filter data by loan intent and observe its impact on the relationship between age and income.</p>
 
-                <li><strong>Default Trends Over Time</strong>
-                    <br> A visualization showcasing default rates and their fluctuations over recent years.
-                    <img src="images/placeholder_graph3.png" alt="Default Trends Over Time" width="300">
-                </li>
-
-                <li><strong>Correlation Heatmap</strong>
-                    <br> A heatmap displaying correlations between key variables in the dataset.
-                    <img src="images/placeholder_graph4.png" alt="Correlation Heatmap" width="300">
-                </li>
-            </ul>
+            <h3>Loan Grade Counts</h3>
+            <iframe src="dynamic_charts/loan_grade_chart.html" width="800" height="600" frameborder="0"></iframe>
+            <p>This bar chart shows the distribution of loan grades, allowing analysis of financial risk profiles by grade.</p>
         </section>
     </main>
 
