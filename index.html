@@ -49,10 +49,44 @@
         </section>
 
         <section>
+            <h2>Reference Papers</h2>
+            <p>
+                Below are two key references that provide context and support for our credit risk analysis:
+            </p>
+            <ul>
+                <li>
+                    This article (<a href="https://www.sciencedirect.com/science/article/pii/S2212567115006711" target="_blank">ScienceDirect</a>) 
+                    examines credit risk, encompassing default risk and portfolio risk in financial transactions. 
+                    It identifies external factors like economic conditions and commodity prices, as well as internal weaknesses 
+                    such as inadequate loan policies and borrower assessments, that influence credit risk. 
+                    The paper emphasizes the importance of measuring, hedging, and monitoring credit risk to mitigate potential losses 
+                    and improve risk management in banking and financial institutions.
+                </li>
+                <li>
+                    This paper (<a href="https://www.econstor.eu/bitstream/10419/83237/1/dp_2004-20.pdf" target="_blank">Econstor</a>) 
+                    investigates the relationship between payment performance and various demographic and financial variables among consumer 
+                    credit clients at a private bank in Turkey. Using logistic binary regression, the study finds that financial factors, 
+                    rather than demographic characteristics, significantly influence repayment performance. Specifically, longer maturity 
+                    periods and higher interest rates are associated with increased credit default risk. The findings suggest that bankers 
+                    should adjust financial variables strategically to reduce credit default risk.
+                </li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Dataset Overview</h2>
             <p>
                 This dataset, sourced from Kaggle (<a href="https://www.kaggle.com/datasets/laotse/credit-risk-dataset" 
-                target="_blank">Credit Risk Dataset</a>), includes over 32,000 observations and 12 variables described below:
+                target="_blank">Credit Risk Dataset</a>), includes 32,581 observations and 12 variables described below. The dataset provides a 
+                detailed overview of borrower profiles, allowing for an in-depth analysis of factors that influence the risk of credit defaulting. 
+            </p>
+
+            <p>
+                Before analysis, the data underwent cleaning to ensure quality and usability. This included handling missing values, standardizing 
+                numerical attributes (e.g., loan amount and income), and encoding categorical variables like loan intent and home ownership. 
+                During the exploration, we noted the absence of certain attributes, such as credit score and geographic location, which could 
+                have provided additional insights into borrower risk profiles. Despite this limitation, the dataset remains highly valuable for 
+                analyzing credit risk trends and predicting default probabilities.
             </p>
             
             <table>
@@ -135,6 +169,7 @@
             <p>
                 <strong>Summary of Findings:</strong>
             </p>
+
             <p>
                 <strong>Descriptive Statistics:</strong><br>
                 <strong>Person Age:</strong> The average age of individuals in the dataset is approximately 27.73 years, with a standard deviation of 6.31 years.
@@ -149,6 +184,7 @@
                 <strong>Loan Percent Income:</strong> On average, loans constitute about 16.95% of an individual's income, with a standard deviation of 10.64%.
                 The loan percent income ranges from 0% to 83%, with the IQR between 9% and 23%.
             </p>
+
             <p>
                 <strong>Conclusion:</strong><br>
                 The analysis of the dataset reveals several key insights:
@@ -160,7 +196,18 @@
                 </ul>
                 Overall, the visualizations and statistical analysis provide a comprehensive overview of the loan data, helping to identify trends and patterns that can inform financial decision-making and risk assessment.
             </p>
+
+            <p>
+                <strong>Future Work:</strong><br>
+                Future work on this analysis could benefit from incorporating additional attributes that are currently missing from the dataset, such as credit scores, geographic location, or borrower expenses, which are critical factors in assessing credit risk more comprehensively. Including more granular data on 
+                loan repayment history or external economic indicators, such as unemployment rates or inflation, could further enhance the predictive accuracy of credit risk models. Additionally, implementing advanced machine learning models like Gradient Boosting or Neural Networks could help capture 
+                non-linear relationships between variables and improve prediction performance. Expanding the scope of the dataset to include data from multiple institutions or regions could also help generalize findings and reduce potential biases. Finally, integrating interactive dashboards or real-time
+                data pipelines would enable continuous monitoring and analysis of credit risk trends, providing actionable insights for financial decision-making.
+            </p>
+
+
         </section>
+
         <section>
             <h2>Team Responsibilities</h2>
             <p>Each team member contributed to the project as follows:</p>
