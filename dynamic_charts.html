@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Risk Analysis Dynamic Plots</title>
+    <title>Interactive Credit Risk Analysis - Filters and Trends</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h1>Credit Risk Analysis Dynamic Plots</h1>
+        <h1>Interactive Credit Risk Analysis - Filters and Trends</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -26,8 +26,20 @@
 
     <main>
         <section>
-            <h2>Dynamic Visualizations</h2>
-            <p>Below are interactive charts for exploring credit risk relationships dynamically:</p>
+            <h2>Interactive Credit Risk Visualizations</h2>
+            <p> Below are dynamic charts for exploring credit risk relationships dynamically. 
+                Use the provided filters, sliders, and tooltips to customize your view and 
+                gain deeper understanding into the dataset.
+            </p>
+
+            </p>
+                <ul>
+                    <li><strong>Filters:</strong> Adjust demographic and financial variables such as age, loan grade, or loan intent to refine the visualizations.</li>
+                    <li><strong>Sliders:</strong> Use sliders to set specific ranges for continuous variables like age or income.</li>
+                    <li><strong>Hover Actions:</strong> Hover over data points or bars to view detailed information, such as individual loan amounts or borrower characteristics.</li>
+                    <li><strong>Zoom and Pan:</strong> For some charts, use the interactive toolbar to zoom in or out and focus on specific areas of the data.</li>
+                </ul>
+            <p>Start by selecting filters and ranges that align with the analysis you are interested in, and watch the charts dynamically update.</p>
             
             <h3>Age and Loan Grade Filters</h3>
             <iframe src="/ds4200_credit_default_prediction/dynamic_charts/age_loan_grade_filters.html" width="1000" height="800" frameborder="0"></iframe>
@@ -47,13 +59,14 @@
                 Hover over individual points to view detailed information about each record, such as income or loan amount, and see how loan intent impacts 
                 the relationship between income and age.
             </p>
+            
 
             <h3>Loan Grade Counts</h3>
             <iframe src="/ds4200_credit_default_prediction/dynamic_charts/loan_grade_chart.html" width="800" height="600" frameborder="0"></iframe>
             <p>
                 This plot.ly bar chart shows the distribution of loan grade amounts, providing insights into financial risk profiles by grade.
                 Hover over each bar to view the exact count of loans for each grade (A-G).
-                Use the interactive bar in the top right to zoom in and out, download the plot, and see how certain grades affects the overall distribution.
+                Use the interactive bar in the top right to zoom in and out, download the plot, and see how certain grades affect the overall distribution.
                 Look into specific portions of the chart by clicking or hovering to examine the data in more detail.
             </p>
         

@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Credit Risk Analysis Project</h1>
+        <h1>Credit Risk Analysis - Loan Default Exloration</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -26,7 +26,7 @@
         <section>
             <h2>About This Project</h2>
             <p>
-                This project explores the use of machine learning techniques, data preprocessing, and statistical analysis
+                This project explores the use of data preprocessing, manipulation, visualization and statistical analysis
                 to assess and predict credit risk. It aims to highlight key financial and demographic factors influencing credit default
                 risk, providing insights valuable to financial institutions and researchers.
             </p>
@@ -51,24 +51,77 @@
         <section>
             <h2>Dataset Overview</h2>
             <p>
-                The dataset includes over 32,000 observations with 12 variables, such as:
+                This dataset, sourced from Kaggle (<a href="https://www.kaggle.com/datasets/laotse/credit-risk-dataset" 
+                target="_blank">Credit Risk Dataset</a>), includes over 32,000 observations and 12 variables described below:
             </p>
-            <ul>
-                <li><strong>person_age:</strong> Age of the borrower.</li>
-                <li><strong>person_income:</strong> Annual income of the borrower.</li>
-                <li><strong>person_home_ownership:</strong> Type of home ownership (e.g., rent, own, mortgage).</li>
-                <li><strong>person_emp_length:</strong> Number of years the person has been employed.</li>
-                <li><strong>loan_intent:</strong> Purpose of the loan (e.g., education, debt consolidation).</li>
-                <li><strong>loan_grade:</strong> Loan quality grade (A-G, with A being the highest).</li>
-                <li><strong>loan_amnt:</strong> Loan amount requested by the borrower.</li>
-                <li><strong>loan_int_rate:</strong> Interest rate of the loan.</li>
-                <li><strong>loan_status:</strong> Whether the borrower defaulted (1) or paid off the loan (0).</li>
-                <li><strong>loan_percent_income:</strong> Percentage of the borrower’s income allocated to the loan.</li>
-                <li><strong>cb_person_default_on_file:</strong> Whether the borrower has a history of defaults (yes/no).</li>
-                <li><strong>cb_person_cred_hist_length:</strong> Length of the borrower’s credit history in years.</li>
-            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>person_age</strong></td>
+                        <td>Age of the borrower (in years). Typical range: 20–144, with most between 23–30.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>person_income</strong></td>
+                        <td>Annual income of the borrower. Ranges from $4,000 to $6,000,000.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>person_home_ownership</strong></td>
+                        <td>Type of home ownership: Rent, Own, or Mortgage.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>person_emp_length</strong></td>
+                        <td>Employment length (in years).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_intent</strong></td>
+                        <td>Purpose of the loan (e.g., Education, Debt Consolidation).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_grade</strong></td>
+                        <td>Loan grade (A-G, with A being the highest).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_amnt</strong></td>
+                        <td>Loan amount requested (ranges from $500 to $35,000).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_int_rate</strong></td>
+                        <td>Interest rate of the loan (ranges from 5.42% to 23.22%).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_status</strong></td>
+                        <td>Loan status (0 for non-default, 1 for default).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>loan_percent_income</strong></td>
+                        <td>Percentage of borrower’s income allocated to the loan.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>cb_person_default_on_file</strong></td>
+                        <td>Indicates if the borrower has a history of defaults (yes/no).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>cb_person_cred_hist_length</strong></td>
+                        <td>Length of the borrower’s credit history (in years).</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <p>Here’s a preview of the data:</p>
             <img src="images/data.png" alt="Dataset preview showing person age, income, home ownership, employment length, loan intent, loan grade, and more" style="max-width: 100%; height: auto;">
+
+            <p>
+                For full details, visit the dataset source on Kaggle: 
+                <a href="https://www.kaggle.com/datasets/laotse/credit-risk-dataset" target="_blank">Credit Risk Dataset</a>.
+            </p>
+            
         </section>
         <section>
             <h2>Conclusion and Summary</h2>
