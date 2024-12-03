@@ -45,31 +45,41 @@
             <p>Now that we have visualized how default rates differ by grade, lets look at the interest rates the correspond to loan grade.
             </p>
 
-            <h2>Correlation Heatmap</h2>
-            <img src="static_plots/correlation_heatmap.png" alt="Correlation heatmap between financial variables" width="600">
-            <p>The heatmap illustrates the relationships between key variables like income, loan amount, and default loan status. High correlation is observed between credit history length and age.
-                
-                ADD FURTHER ANALYSIS
-                
-                <br>Next, we examine how income affects interest rates to uncover additional trends.
-            </p>
-
-            <h2>Interest Rate vs Income</h2>
-            <img src="static_plots/interest_rate_vs_income.png" alt="Scatter plot of interest rate vs income" width="600">
-            <p>This scatter plot shows the relationship between loan interest rate and borrower income, segmented by loan default status.
-                
-                ADD FURTHER ANALYSIS
-                
-                <br>The final chart explores how interest rates vary by loan grade, providing a comprehensive view of financial risk.
-            </p>
-
             <h2>Interest Rate Boxplot by Loan Grade</h2>
-            <img src="static_plots/interest_rate_by_grade.png" alt="Box plot of interest rate by loan grade and status" width="600">
-            <p>Boxplots demonstrate that lower-grade loans (i.e. F and G) have higher interest rates, with visible differences by default status.
-
-                ADD FURTHER ANALYSIS
-
+            <img src="static_plots/interest_rate_by_grade_updated.png" alt="Box plot of interest rate by loan grade and status" width="600">
+            <p>This figure visualizes the relationship between loan grades, interest rates, and loan default status. 
+                It is a box plot comparing the distribution of interest rates across different loan grades (A to G) while distinguishing between defaulted and non-defaulted loans.
+                The graph shows that as loan grades progress from A to G, interest rates generally increase. 
+                This trend reflects the increasing risk associated with lower loan grades, as higher interest rates are typically assigned to riskier loans. 
+                Additionally, there is a clear distinction in interest rates between defaulted and non-defaulted loans, with defaulted loans often having higher median interest 
+                rates within each grade. The spread of interest rates also widens for lower grades, indicating more variability in rates for riskier loans. This figure highlights how loan grades and 
+                default status influence interest rate assignment. 
             </p>
+            <p>Now that we’ve established a relationship between loan grade, interest rate, and default risk, let’s explore the variables associated with receiving higher or lower loan grades. 
+                To start, we’ll examine how income influences loan grade.
+            </p>
+
+            <h2>Average Income vs Loan Grade</h2>
+            <img src="static_plots/income_by_loan_grade.png" alt="Bar chart of average income by loan grade" width="600">
+            <p>
+                This figure displays the average income across different loan grades. The graph indicates that there is minimal variation in average income between loan grades, with grades F and G 
+                showing the highest annual incomes compared to the higher loan grades. This could be explained by the fact that individuals with higher incomes may still fall into lower loan grades 
+                (such as F and G) due to other financial factors, like high debt-to-income ratios, poor credit history, or previous defaults. 
+                Higher-income individuals might also be more likely to take out larger loans or have access to more credit, which could come with higher interest rates and potentially lower loan grades 
+                due to perceived risk. 
+            </p>
+            <p>Although income does not appear to have a strong influence on loan grade, let's explore whether other variables may be correlated with higher default risk 
+                through a correlation heatmap.
+            </p>
+
+            <h2>Correlation Heatmap</h2>
+            <img src="static_plots/correlation_heatmap_updated" alt="Correlation heatmap of key default risk indicators" width="600">
+            <p>The figure is a correlation heatmap showing relationships between personal and loan attributes. It highlights key insights regarding loan status: loan status negatively 
+                correlates with borrower age, income, and employment length, suggesting that younger, lower-income borrowers with shorter work histories are more likely to default. 
+                Conversely, loan status positively correlates with higher interest rates and loans comprising a larger portion of the borrower's income, indicating these loans are more prone to default. 
+            </p>
+            <p>These insights help lenders identify high-risk borrowers and make more informed lending decisions. These variables will be explored in more detail in the credit risk and borrower 
+                behavior section of this website</p>
         </section>
     </main>
 
