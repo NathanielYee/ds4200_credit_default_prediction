@@ -36,11 +36,13 @@
 
             <h2>Loan Status by Loan Grade</h2>
             <img src="static_plots/loan_status_by_grade.png" alt="Bar plot of loan status by grade" width="600">
-            <p>Default rates are higher for lower grades (D-G). Higher-grade loans (A-B) generally show lower default risks.
-                
-                ADD FURTHER ANALYSIS
-
-                <br>While loan grades can be informative about credit risk, other financial factors are also influencial. The next visualization explores relationships between these variables.
+            <p>This figure is a stacked bar chart that illustrates the proportion of loans categorized by loan grade (A through G) and their corresponding loan statuses (non-default and default). Loan grades represent the credit risk of a loan, with A being the lowest risk and G the highest. 
+                Loan statuses indicate whether a loan was repaid as agreed (non-default) or failed to meet repayment obligations (default). The chart shows that for higher-quality grades (A and B), 
+                the proportion of non-default loans is significantly higher, indicating lower default rates. As the grades move from C to G, the proportion of defaults increases markedly, 
+                with F and G having the highest default rates. This pattern demonstrates a clear correlation between loan grade and repayment performance, emphasizing the importance of credit risk 
+                assessment in lending decisions.
+            </p>
+            <p>Now that we have visualized how default rates differ by grade, lets look at the interest rates the correspond to loan grade.
             </p>
 
             <h2>Correlation Heatmap</h2>
