@@ -1,0 +1,82 @@
+Link to website: https://nathanielyee.github.io/ds4200_credit_default_prediction/
+
+1. Loan Grade Counts
+
+Marks: 
+  Rectangular bars, representing counts for each loan grade.
+
+Channels: 
+  Position: Loan grades (A-G) are distributed along the x-axis.
+  Height (Position): Encodes the count of each loan grade on the y-axis.
+  Color: Uniform blue color used for all bars. A consistent color scheme maintains simplicity and readability aiding visual grouping.
+
+Why this type of visualization was chosen:
+  A bar chart is ideal for showing discrete categories (loan grades) and their respective frequencies. 
+  It clearly communicates comparisons between categories, making it easier to identify patterns or distributions.
+
+Benefits of This Visualization:
+  Clarity: Simple and direct, with no extraneous elements, making it ideal for summarizing categorical data.
+  Comparison: The height of the bars makes it easy to compare counts across categories at a glance.
+
+2. Loan Status by Loan Grade
+
+Marks: 
+  Rectangular bars, segmented to represent "Non-Default" and "Default" loan statuses.
+
+Channels:
+    Position: Loan grades (A-G) along the x-axis.
+    Height (Position): Proportion of each loan status along the y-axis.
+    Color: Blue for "Non-Default" and orange for "Default" to distinguish the segments.
+
+Why this type of visualization was chosen:
+  A stacked bar chart effectively displays the composition of loan statuses within each grade while allowing for easy comparison across grades.
+  It highlights the relative proportions of each status, revealing trends such as an increasing proportion of defaults in lower grades.
+  The chart allows for a clear comparison of how loan grades impact default rates.
+
+3. Interest Rate by Loan Grade
+
+Marks:
+  Box Plots: Used to represent the distribution of interest rates for each loan grade (A to G), separated by loan status (Default or Non-Default).
+  Points: Outliers in the data are displayed as individual points beyond the whiskers of the box plots.
+
+Channels:
+  X-axis (Position): Represents the loan grades (A to G) as a categorical variable.
+  Y-axis (Position): Represents the interest rate as a continuous numerical variable.
+  Color: Differentiates between the two loan statuses (Default in blue, Non-Default in red).
+  Size: Implicitly conveys the variance and spread in interest rates through the size of the box and whiskers.
+
+Why this type of visualization was chosen:
+  Box plots are effective for summarizing distributions and highlighting variations within each loan grade. 
+  This helps in identifying trends (e.g., higher interest rates for lower grades) and comparing the distributions for Default and Non-Default loans.
+  This type of visualization effectively shows how interest rates vary across loan grades and between Default and Non-Default loans, making it suitable for comparative and distribution analysis.
+  Including outliers via points helps in identifying extreme values which might provide insights into atypical loan conditions.
+
+4. Average Income vs Loan Grade
+Marks:
+  Bars: Represent the average income for each loan grade (A to G).
+
+Channels:
+  X-axis (Position): Represents loan grades as a categorical variable.
+  Y-axis (Position): Represents the average income as a continuous numerical variable.
+  Color: Uniform blue is used across all bars, ensuring simplicity and focus on the height of the bars, which conveys the data.
+
+Justification for This Visualization:
+  A bar chart is suitable for comparing discrete categories (loan grades) with a continuous variable (average income). It effectively shows how income varies across loan grades.
+  The chart emphasizes differences in average income among loan grades. The rising height of bars demonstrates a clear trend or comparison.
+
+5. Correlation Heatmap
+
+Marks: 
+  Cells : Each cell represents a pairwise correlation between two variables.
+
+Channels:
+  Position (X-axis and Y-axis): Represents the variables being compared. The rows and columns are arranged to align with the correlation matrix.
+  The position of each cell on the grid indicates the pair of variables it represents.
+  Color (Hue/Intensity): Encodes the strength and direction of the correlation. A gradient is used to display correlation. Dark blue and dark red indicate strong correlations.
+
+Justification for This Visualization:
+  A correlation heatmap efficiently visualizes relationships between multiple variables in a single view.
+  The color gradient allows for quick identification of trends and patterns with strong positive or negative correlations that stand out due to intense colors.
+
+
+
