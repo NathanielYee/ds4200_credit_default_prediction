@@ -52,6 +52,7 @@ Why this type of visualization was chosen:
   Including outliers via points helps in identifying extreme values which might provide insights into atypical loan conditions.
 
 4. Average Income vs Loan Grade
+
 Marks:
   Bars: Represent the average income for each loan grade (A to G).
 
