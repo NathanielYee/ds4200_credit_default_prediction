@@ -61,6 +61,11 @@
                 d.loan_int_rate = +d.loan_int_rate;
             });
 
+            // Create color scale based on loan types
+            const loanTypes = [...new Set(data.map(d => d.loan_intent))]; // Unique loan types
+            const color = d3.scaleOrdinal()
+                            .domain(loanTypes)
+                            .range(d3.schemeCategory10); // Use D3's categorical color scheme
             // Create scales
             const x = d3.scaleLinear()
                         .domain([0, d3.max(data, d => d.loan_percent_income)])
@@ -100,8 +105,28 @@
                .attr("cx", d => x(d.loan_percent_income))
                .attr("cy", d => y(d.loan_int_rate))
                .attr("r", 4)
-               .attr("fill", "blue")
+               .attr("fill", d => color(d.loan_intent))
                .attr("opacity", 0.7);
+
+            // Add legend
+            const legend = svg.selectAll(".legend")
+                              .data(loanTypes)
+                              .enter()
+                              .append("g")
+                              .attr("transform", (d, i) => `translate(${width - 100}, ${i * 20})`);
+
+            legend.append("rect")
+                  .attr("width", 12)
+                  .attr("height", 12)
+                  .attr("fill", color);
+
+            legend.append("text")
+                  .attr("x", 20)
+                  .attr("y", 10)
+                  .text(d => d)
+                  .style("font-size", "12px")
+                  .attr("alignment-baseline", "middle");
+            
         }).catch(error => {
             console.error("Error loading the data:", error);
         });
