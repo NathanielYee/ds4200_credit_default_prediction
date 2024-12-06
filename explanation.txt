@@ -80,4 +80,100 @@ Justification for This Visualization:
   The color gradient allows for quick identification of trends and patterns with strong positive or negative correlations that stand out due to intense colors.
 
 
+Dynamic Visualizations
 
+6. Age and Income with Loan Grade
+Marks:
+  Scatter Plot: Points representing individual data entries with age and loan-to-income ratio.
+  Bar Plot: Rectangular bars representing the count of loan statuses, segmented by loan grade.
+
+Channels:
+  Scatter Plot:
+  Position:
+  X-Axis: Encodes person_age (numerical) for a continuous distribution.
+  Y-Axis: Encodes loan_to_income_ratio (numerical), providing a sense of proportionality.
+  Color:
+  Encodes loan_grade using a color scale (redyellowgreen, reversed), dynamically highlighting points that match the selected filters.
+  Unmatched points are shown in lightgrey, emphasizing filtered data.
+  Tooltip: Displays details for each point (person_age, loan_amt, loan_int_rate, loan_status), improving interactivity and exploration.
+
+Why This Visualization Was Chosen:
+  The combination of scatter and bar plots effectively communicates both individual relationships and aggregated trends within the dataset.
+  The scatter plot captures the relationship between person_age and loan_to_income_ratio, categorized by loan_grade, making it ideal for exploring numerical relationships 
+  and patterns. Meanwhile, the bar plot provides an aggregated view of loan status distribution, segmented by loan_grade, which is particularly useful for identifying 
+  trends within categorical data. Together, these visualizations complement each other, offering both detailed and high-level insights into the data.
+
+Benefits of This Visualization:
+  This visualization stands out for its clarity and interactivity. The scatter plot presents continuous variables in a clear, visually appealing manner, while the bar plot 
+  summarizes categorical data to enable quick comparisons. The addition of filters, including a range slider for person_age and radio buttons for loan_grade, enhances user 
+  control, allowing for tailored exploration of the dataset. By combining detailed relationships with aggregated trends, the visualization ensures comprehensive insights, 
+  enabling users to identify patterns and anomalies efficiently.
+
+7. Age and Loan Intent
+Marks:
+  Scatter Plot: Points represent individuals, showing their age and income, categorized by loan intent.
+  Bar Plot: Rectangular bars represent the total loan amounts for different age groups, segmented by loan intent.
+Channels:
+  Scatter Plot:
+  Position
+    X-Axis: Encodes person_age (numerical), showing a continuous age distribution.
+    Y-Axis: Encodes person_income (numerical), illustrating income levels.
+  Color:
+    Encodes loan_intent with a categorical color scheme (category10) for clear differentiation.
+    Unselected data points are shown without color, emphasizing filtered results.
+  Tooltip: Displays loan_amt and loan_int_rate, providing additional details for individual points.
+  Bar Plot
+    Position:
+    X-Axis: Encodes person_age, binned into age ranges, to simplify comparisons across groups.
+    Y-Axis: Encodes the sum of loan_amnt for each bin, summarizing total loan amounts by age.
+  Color:
+    Encodes loan_intent using the same categorical color scheme, maintaining visual consistency with the scatter plot.
+    Unselected categories are shown in lightgrey, highlighting the impact of filtering.
+    Tooltip: Provides the total loan amount for specific age ranges, aiding precise exploration.
+  Interactivity:
+  Radio Buttons: Allow selection of specific loan_intent categories or "All" to display the entire dataset.
+  Combined Filters: Selection tools dynamically update both visualizations, ensuring the displayed data reflects user preferences.
+
+Why This Visualization Was Chosen:
+This visualization effectively combines a scatter plot and a bar plot to analyze the relationship between age, income, and loan intent. 
+The scatter plot highlights the individual-level connection between person_age and person_income, categorized by loan intent, making it ideal 
+or discovering trends or outliers. The bar plot complements this by summarizing total loan amounts across age ranges, segmented by loan intent, 
+which is crucial for understanding aggregate patterns. Together, the plots provide both granular and high-level insights, catering to diverse analytical needs.
+
+Benefits of This Visualization:
+The combination of scatter and bar plots provides clarity and flexibility, making the visualization intuitive and informative. 
+The scatter plot captures individual relationships, while the bar plot aggregates data for broader pattern identification. 
+The use of interactivity, with radio buttons to filter by loan_intent, enhances user engagement and ensures the analysis can be tailored to specific categories of interest. 
+By connecting individual data points with aggregated trends, this visualization enables users to uncover meaningful insights and compare categories effortlessly.
+
+
+D3 Visualization 
+Loan Percent Income vs Loan Interest Rate by Loan Intent
+
+Marks:
+  Scatter Plot: Points represent individual loans, showing the relationship between loan percent income and loan interest rate, categorized by loan intent.
+  Legend: Rectangles and labels encode distinct loan intents, helping users identify color categories in the scatter plot.
+Channels:
+  Scatter Plot:
+  Position:
+  X-Axis: Encodes loan_percent_income (numerical), showing how much of a borrower's income is allocated toward the loan.
+  Y-Axis: Encodes loan_int_rate (numerical), illustrating interest rates for loans.
+  Color:
+  Encodes loan_intent, with each category assigned a unique color from the d3.schemeCategory10 palette, ensuring clear differentiation.
+  Size and Opacity:
+  Points have a fixed radius of 4 and are semi-transparent (opacity 0.7) to mitigate overplotting and enhance visibility.
+  Legend:
+  Shape: Small rectangles represent each loan intent category.
+  Text: Labels provide the name of each loan intent, aligning with their corresponding colors in the scatter plot.
+
+  Why This Visualization Was Chosen:
+A scatter plot is ideal for analyzing relationships between two continuous variables—loan_percent_income and loan_int_rate. 
+By categorizing points using color, it further highlights how different loan intents influence these variables. 
+This approach enables users to visually compare the distributions and trends for each loan intent. 
+Additionally, the inclusion of a legend ensures clarity by mapping colors to categories, enhancing interpretability.
+
+Benefits of This Visualization:
+The scatter plot effectively captures individual-level relationships while showcasing differences across loan intent categories. 
+The use of color enhances distinction between categories, while opacity reduces visual clutter in areas with dense data points. 
+The inclusion of a legend provides a clear reference for interpreting the colors, making the visualization accessible and user-friendly. 
+Overall, this visualization balances detailed data representation with readability, making it suitable for exploring nuanced patterns and relationships in the dataset.
